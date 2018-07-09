@@ -23,7 +23,7 @@
           $url='http://semarang.heritagejava.com/generatekategori.php';
           $xml = simplexml_load_file($url);
           foreach($xml->kategori as $xm){
-          		echo '<li><a href="#">'.$xm['namaKategori'].'</a></li>';
+          		echo '<li><a href="http://localhost/ws/header.php?k='.$xm['id'].'">'.$xm['namaKategori'].'</a></li>';
           	}
           ?>
         </ul>
@@ -35,6 +35,7 @@
 
 <div class="container">
    Halaman Utama
+   <?php include 'main.php'; ?>
 </div>
 
 </body>
